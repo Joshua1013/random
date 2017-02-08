@@ -16,6 +16,12 @@ makeCircle(120,50,20, "green")
 makeCircle(120,50,16, "white")
 makeCircle(140,25,20, "red")
 makeCircle(140,25,16, "white")
+makeLine(55,43,10,43, "blue")
+makeLine(75,68,10,68, "yellow")
+makeLine(120,68,200,68, "green")
+makeLine(140,43,200,43, "red")
+makeText(Rings,100,75,20)
+makeText
 }
 
 

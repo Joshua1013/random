@@ -5,7 +5,17 @@ var namespace = "http://www.w3.org/2000/svg"
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createFirstScene() {
-    
+   makeRect(0,0,200,100,"white",1);
+    makeCircle(60,25,20, "blue")
+makeCircle(60,25,16, "white")
+makeCircle(80,50,20, "yellow")
+makeCircle(80,50,16, "white")
+makeCircle(100,25,20, "black")
+makeCircle(100,25,16, "white")
+makeCircle(120,50,20, "green")
+makeCircle(120,50,16, "white")
+makeCircle(140,25,20, "red")
+makeCircle(140,25,16, "white")
 }
 
 
@@ -13,6 +23,19 @@ function createFirstScene() {
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createSecondScene() {
+   makeRect(0,0,200,100,"white",1);
+    makeRect(25,25,150,100, "lightgreen")
+    makeLine(25,90,200,90, "white")
+    makeLine(25,35,200,35, "white")
+    makeLine(60,35,60,90, "white")
+    makeLine(140,35,140,90, "white")
+    makeLine(60,64,140,64, "white")
+    makeLine(25,35,200,35, "white")
+    makeLine(100,25,100,110, "black", 0.7)
+    makeCircle(35,77,2,"blue")
+    makeCircle(80,50,2,"blue")
+    makeCircle(120,77,2,"red")
+    makeCircle(165,50,2,"red")
     
 }
 
@@ -21,7 +44,55 @@ function createSecondScene() {
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createThirdScene() {
-    
+     makeRect(0,0,200,100,"white",1);
+    makeRect(25,25,150,100, "lightgreen")
+    makeLine(28,28,28,97, "white")
+    makeLine(172,28,172,97, "white")
+    makeLine(28,28,172,28, "white")
+    makeLine(28,97,172,97, "white")
+    makeCircle(100,63,10, "white")
+    makeCircle(100,63,9, "lightgreen")
+    makeLine(100,28,100,97, "white")
+    makeLine(28,50,40,50, "white")
+    makeLine(28,75,40,75, "white")
+    makeLine(28,40,50,40, "white")
+    makeLine(28,85,50,85, "white")
+    makeLine(150,40,172,40, "white")
+    makeLine(150,85,172,85, "white")
+    makeLine(160,50,172,50, "white")
+    makeLine(160,75,172,75, "white")
+    makeCircle(50,63,9, "white")
+    makeCircle(50,63,8, "lightgreen")
+    makeCircle(150,63,9, "white")
+    makeCircle(150,63,8, "lightgreen")
+    makeLine(50,40,50,85, "white")
+    makeLine(40,50,40,75, "white")
+    makeLine(150,40,150,85, "white")
+    makeLine(160,50,160,75, "white")
+    makeRect(41,50,8.5,30, "lightgreen")
+    makeRect(150.5,50,8.5,30, "lightgreen")
+    makeCircle(40,63,2, "blue")
+    makeCircle(50,63,2, "blue")
+    makeCircle(55,43,2, "blue")
+    makeCircle(55,83,2, "blue")
+    makeCircle(70,90,2, "blue")
+    makeCircle(70,70,2, "blue")
+    makeCircle(70,50,2, "blue")
+    makeCircle(70,35,2, "blue")
+    makeCircle(85,83,2, "blue")
+    makeCircle(85,43,2, "blue")
+    makeCircle(85,63,2, "blue")
+    makeCircle(160,63,2, "red")
+    makeCircle(150,63,2, "red")
+    makeCircle(115,63,2, "red")
+    makeCircle(145,43,2, "red")
+    makeCircle(145,83,2, "red")
+    makeCircle(130,90,2, "red")
+    makeCircle(130,35,2, "red")
+    makeCircle(115,83,2, "red")
+    makeCircle(115,43,2, "red")
+    makeCircle(130,50,2, "red")
+    makeCircle(130,73,2, "red")
 }
 
 
@@ -32,10 +103,14 @@ function createThirdScene() {
 // This function is called whenever you press the "Go!" button.
 function createRandomScene() {
     // Generate a random number between 0 and 1, and store it in a variable.
-    
+    var myNumber = Math.random()
+    if(myNumber < 0.33){
+        createFirstScene();
     // If the number is less than 0.33, call the function to create your first scene.
-    
-    
+    } else if (myNumber < 0.67) {
+        createSecondScene();
+    } else {
+        createThirdScene();
     
     // Else, if the number is less than 0.67, call the function to create your second scene.
     
@@ -44,7 +119,7 @@ function createRandomScene() {
     // Else, call the function to create your third scene.
     
     
-    
+    }
 }
 
 

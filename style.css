@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+
 #button-container {
     text-align: center;
 }
 
 h1 {
     text-align: center;
+    color: blue;
+    font-family: Pangolin;
+    
+}
+body {
+    background-color: bisque ;  
 }

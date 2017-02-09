@@ -5,7 +5,7 @@ var namespace = "http://www.w3.org/2000/svg"
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createFirstScene() {
-   makeRect(0,0,200,100,"white",1);
+   makeRect(0,0,200,100,"bisque",1);
     makeCircle(60,25,20, "blue")
 makeCircle(60,25,16, "white")
 makeCircle(80,50,20, "yellow")
@@ -20,37 +20,50 @@ makeLine(55,43,10,43, "blue")
 makeLine(75,68,10,68, "yellow")
 makeLine(120,68,200,68, "green")
 makeLine(140,43,200,43, "red")
-makeText(Rings,100,75,20)
-makeText
+makeText('Rings', 78,90,20,"Pangolin","blue" )
+var jdcool = Math.random();
+    if( jdcool >0.5 ){ 
+          makeCircle(60,25,20, "blue")
+makeCircle(60,25,16, "bisque")
+makeCircle(80,50,20, "yellow")
+makeCircle(80,50,16, "bisque")
+makeCircle(100,25,20, "black")
+makeCircle(100,25,16, "bisque")
+makeCircle(120,50,20, "green")
+makeCircle(120,50,16, "bisque")
+makeCircle(140,25,20, "red")
+makeCircle(140,25,16, "bisque")
 }
-
+}
 
 // Fill in this function so that it draws something using SVG shapes!
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createSecondScene() {
-   makeRect(0,0,200,100,"white",1);
+   makeRect(0,0,200,100,"bisque",1);
     makeRect(25,25,150,100, "lightgreen")
-    makeLine(25,90,200,90, "white")
-    makeLine(25,35,200,35, "white")
+    makeLine(25,90,175,90, "white")
+    makeLine(25,35,175,35, "white")
     makeLine(60,35,60,90, "white")
     makeLine(140,35,140,90, "white")
     makeLine(60,64,140,64, "white")
-    makeLine(25,35,200,35, "white")
+    makeLine(25,35,175,35, "white")
     makeLine(100,25,100,110, "black", 0.7)
+      makeText("Tennis", 73,20,20,"Pangolin","blue" )
+    var jdcool = Math.random();
+    if( jdcool >0.5 ){ 
     makeCircle(35,77,2,"blue")
     makeCircle(80,50,2,"blue")
     makeCircle(120,77,2,"red")
     makeCircle(165,50,2,"red")
-    
 }
-
+}
 
 // Fill in this function so that it draws something using SVG shapes!
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createThirdScene() {
-     makeRect(0,0,200,100,"white",1);
+     makeRect(0,0,200,100,"bisque",1);
     makeRect(25,25,150,100, "lightgreen")
     makeLine(28,28,28,97, "white")
     makeLine(172,28,172,97, "white")
@@ -77,6 +90,9 @@ function createThirdScene() {
     makeLine(160,50,160,75, "white")
     makeRect(41,50,8.5,30, "lightgreen")
     makeRect(150.5,50,8.5,30, "lightgreen")
+    makeText('Soccer', 73,20,20,"Pangolin","blue")
+    var jdcool = Math.random();
+    if( jdcool >0.5 ){    
     makeCircle(40,63,2, "blue")
     makeCircle(50,63,2, "blue")
     makeCircle(55,43,2, "blue")
@@ -99,6 +115,8 @@ function createThirdScene() {
     makeCircle(115,43,2, "red")
     makeCircle(130,50,2, "red")
     makeCircle(130,73,2, "red")
+    
+}
 }
 
 
@@ -107,17 +125,22 @@ function createThirdScene() {
 
 // FILL IN THIS FUNCTION!
 // This function is called whenever you press the "Go!" button.
+var t=0;
 function createRandomScene() {
     // Generate a random number between 0 and 1, and store it in a variable.
     var myNumber = Math.random()
-    if(myNumber < 0.33){
+    if(myNumber < 0.33 && t!=1){
         createFirstScene();
+        t=1;
     // If the number is less than 0.33, call the function to create your first scene.
-    } else if (myNumber < 0.67) {
+    } else if (myNumber < 0.67 && t!=2) {
         createSecondScene();
-    } else {
+        t=2;
+    } else if(t!=3) {
         createThirdScene();
-    
+    t=3;
+    }else{
+        createRandomScene();
     // Else, if the number is less than 0.67, call the function to create your second scene.
     
     
